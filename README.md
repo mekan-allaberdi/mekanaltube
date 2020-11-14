@@ -9,6 +9,10 @@
     $ python mytube/web/app.py
 
 
+## Mongodb
+    dbanme=mytubedb
+
+
 ## Routes:
 
   Videos: 127.0.0.1:1818
