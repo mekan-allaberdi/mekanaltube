@@ -1,6 +1,5 @@
 from pymongo import MongoClient
 
 DB_NAME = 'mytubedb'
-DB_URI = 'mongodb+srv://mekan:ezizhan>@cluster0.nsaos.mongodb.net/mytubedb?retryWrites=true&w=majority'
-client = MongoClient(DB_URI)
+client = MongoClient('mongodb://localhost:27017/')
 db = client[DB_NAME]
