@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Themes</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet"/>
+</head>
+<body>
+    <h2>Themes</h2>
+        <table class="table table-striped table-condensed table-hover">
+        <thead>
+        <tr>
+            <th>
+                <div class="row">
+                    <div class="col-xs-10 col-md-4">Name</div>
+                    <div class="col-xs-10 col-md-4">Score</div>
+                </div>
+            </th>
+        </tr>
+        {% macro item_view(item) %}
+            <tr>
+                <td>
+                    <div class="row">
+                        <div class="col-xs-10 col-md-4">
+                            {{ item[0] }}
+                        </div>
+                         <div class="col-xs-10 col-md-4">
+                            {{ item[1] }}
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        {% endmacro %}
+        </thead>
+        <tbody>
+        {% for item in items %}
+            {{ item_view(item) }}
+        {% else %}
+            <tr>
+                <th>
+                    <p class="text-center">No Themes</p>
+                </th>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
