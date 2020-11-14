@@ -1,1 +1,1 @@
-web: gunicorn mytube.web:app
+web: gunicorn mytube.web.app:app
