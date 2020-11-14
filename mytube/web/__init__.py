@@ -3,11 +3,10 @@
 
 import configparser
 import logging.config
-import decimal
-import json
 import os
 
-from flask import Flask, request, Markup, render_template, session, jsonify
+from flask import Flask, jsonify
+
 
 app = None
 mail = None
