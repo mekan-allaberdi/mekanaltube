@@ -46,9 +46,5 @@ def create(name, theme):
 
 
 def get_all():
-    return [{'name': 'Eziz',
-            'theme': 'film',
-            'thumb_up': 1,
-            'thumb_down': 2}]
     return list(db.video.find({}))
 
