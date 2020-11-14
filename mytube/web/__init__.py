@@ -8,8 +8,6 @@ import json
 import os
 
 from flask import Flask, request, Markup, render_template, session, jsonify
-from flask_pymongo import PyMongo
-
 
 app = None
 mail = None
